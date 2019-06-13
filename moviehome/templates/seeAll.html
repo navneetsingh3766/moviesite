@@ -1,0 +1,114 @@
+{% load static %}
+<html>
+    <head>
+    <title>MoviesColleaction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/seeAll.css' %}" type="text/css" media="all" />
+    <script type="text/javascript" src="{% static 'js/jquery-1.4.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-func.js' %}"></script>
+    </head>
+<body>
+        <div id="shell">
+                <div id="header">
+                    <h1 id="logo"><a href="/">
+            <img id="logo-img" src="{% static 'css/images/logo_4_75.png' %}" alt="image"/>
+        </a></h1>
+                   <!-- NAVIGATION -->
+                    <div id="navigation">
+                        <ul>
+                            <li><a class="active" href="/">HOME</a></li>
+                            <li><a href="/series">SERIES</a></li>
+                            <li><a href="/coming-soon">COMING SOON</a></li>
+                            <li><a href="/vpn">VPN</a></li>
+                            <li><a href="/contact-us">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                    <hr/>
+                    <!-- SUB-NAVIGATION -->
+                <div id="sub-navigation">
+                    <ul>
+                        <li><a href="/latest-movies">Latest Movies</a></li>
+                        <li><a href="/bollywood-movies">Bollywood Movies</a></li>
+                        <li><a href="/hollywood-movies">Hollywood Movies</a></li>
+                        <li><a href="/hd-movies">HD Movies</a></li>
+                    </ul>
+                    
+                    <!-- SEARCH BAR -->
+                <div id="search">
+                    <form action="/search" method="GET" accept-charset="utf-8">
+                      <label for="search-field">SEARCH</label>
+                      <input type="text" name="q" placeholder="Enter search here" value="{{ request.GET.q }}" id="search-field" class="blink search-field"  />
+                      <input type="submit" value="GO!" class="search-button" />
+                    </form>
+                </div>
+            </div>
+                    <hr/>
+                </div>
+    <div id="fullpage">
+        <h1  class = "page_title" style="text-align:center">{{ page_title|title }}
+            {% if home_link == 'home page' %}
+            <a href="/" style="color:#fff;">Home Page</a>
+            {% endif %}
+        </h1>
+    <div id="all-box">
+        {% for movie in movies %}
+            <div class="movie-box">
+                    <div class="movie-block">
+                    <div class="movie-image">
+                        <!-- replace the links -->
+                        <a href="/details/{{ movie.movie_details_page }}">
+                        <span class="play">
+                            <span class="name">
+                                {{ movie.movie_name }}
+                            </span>
+                        </span>
+                    <img src="{{ movie.movie_image_url }}" alt="{{ movie.movie_name }} image"/>
+                    </a>
+                    </div>
+                    <div class="movie-details">
+                    <div class="movie-name">
+                        <p>{{ movie.movie_name|title }}</p>
+                    </div>
+                    <div class="movie-quality">
+                        <p>{{ movie.movie_quality|upper }}</p>
+                    </div>
+                    <div class="rating">
+                        <p class="idbm">IDBM</p>
+                        <p class="star"style="color:#ffcc00;">&#9733;</p>
+                        <p>{{ movie.movie_rating }}/10</p>
+                    </div>
+                </div>
+                </div>
+                </div>
+        {% endfor %}
+    </div>
+    <div class="pages">
+        <div class="pagination">
+            <div class="step-links">
+                {% if movies.has_previous %}
+                    <a href="?page=1{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo; first</a>
+                    <a href="?page={{ movies.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+                {% endif %}
+                {% if movies.has_previous or movies.has_next %}
+                <div class="current">
+                    Page {{ movies.number }} of {{ movies.paginator.num_pages }}
+                </div>
+                {% endif %}
+                {% if movies.has_next %}
+                    <a href="?page={{ movies.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+                    <a href="?page={{ movies.paginator.num_pages }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">last &raquo;</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    </body>
+    </html>

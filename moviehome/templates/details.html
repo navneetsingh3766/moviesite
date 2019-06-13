@@ -1,0 +1,433 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>{{ object.movie_name|title }} | MoviesColleaction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="en" />
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{% static 'css/details.css' %}" type="text/css" media="all" />
+        <!--<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>-->
+        <!--<script type="text/javascript" src="js/jquery-func.js"></script>-->
+        </head>
+    <body>
+        <div id="shell">
+            <div id="header">
+                <h1 id="logo"><a href="/">
+            <img id="logo-img" src="{% static 'css/images/logo_4_75.png' %}" alt="image"/>
+        </a></h1>
+               <!-- NAVIGATION -->
+               <div id="navigation">
+            <ul>
+                <li><a class="active" href="/">HOME</a></li>
+                <li><a href="/series">SERIES</a></li>
+                <li><a href="/coming-soon">COMING SOON</a></li>
+                <li><a href="/vpn">VPN</a></li>
+                <li><a href="/contact-us">CONTACT US</a></li>
+            </ul>
+        </div>
+        <hr/>
+        <!-- SUB-NAVIGATION -->
+        <div id="sub-navigation">
+            <ul>
+                <li><a href="/latest-movies">Latest Movies</a></li>
+                <li><a href="/bollywood-movies">Bollywood Movies</a></li>
+                <li><a href="/hollywood-movies">Hollywood Movies</a></li>
+                <li><a href="/hd-movies">HD Movies</a></li>
+            </ul>
+
+        <!-- SEARCH BAR -->
+        <div id="search">
+                <form action="/search" method="GET" accept-charset="utf-8">
+                  <label for="search-field">SEARCH</label>
+                  <input type="text" name="q" placeholder="Enter search here" value="{{ request.GET.q }}" id="search-field" class="blink search-field"  />
+                  <input type="submit" value="GO!" class="search-button" />
+                </form>
+            </div>
+        </div>
+        <hr/>
+    </div>
+            <!-- HEADER END -->
+            <!-- movie containt change here -->
+            <div id="details">
+                <!-- movie details -->
+                <div class="movie-name">
+                    <h1>{{ object.movie_name|title }}</h1>
+                </div>
+                <div class="movie-details-box">
+                    <div class="movie-details">
+                        <img src="{{ object.movie_image_url }}" alt="movie pic"/>
+                        <div class="movie-file-details">
+                            <div class="movie-file-box">
+                                <div class="movie-file">
+                                    <p class="movie-year-left left">
+                                        YEAR:-
+                                    </p>
+                                    <p class="movie-year-right right">
+                                        {% if object.movie_year != '' and object.movie_year != None %}
+                                        {{ object.movie_year }}
+                                        {% else %}
+                                        ---
+                                        {% endif %}
+                                    </p>
+                                    </div>
+                                <div class="movie-file">
+                                    <p class="movie-audio-left left">
+                                        Audio:-
+                                    </p>
+                                    <p class="movie-audio-right right">
+                                        {% if object.movie_audio != '' and object.movie_audio != None %}
+                                        {{ object.movie_audio }}
+                                        {% else %}
+                                        ---
+                                        {% endif %}
+
+                                    </p>
+                                    </div>
+                                <div class="movie-file">
+                                        <p class="movie-quality-left left">
+                                            Quality:-
+                                        </p>
+                                        <p class="movie-quality-right right">
+                                        {% if object.movie_quality != '' and object.movie_quality != None %}
+                                        {{ object.movie_quality }}
+                                        {% else %}
+                                        ---
+                                        {% endif %}
+                                        </p>
+                                    </div>
+                                <div class="movie-file">
+                                        <p class="movie-stars-left left">
+                                            Stars:-
+                                        </p>
+                                        <p class="movie-stars-right right">
+                                        {% if object.movie_stars_in_movie != '' and object.movie_stars_in_movie != None %}
+                                        {{ object.movie_stars_in_movie }}
+                                        {% else %}
+                                        ---
+                                        {% endif %}
+                                        </p>
+                                    </div>
+                                <div class="movie-file">
+                                        <p class="movie-director-left left">
+                                            Director:-
+                                        </p>
+                                        <p class="movie-director-right right">
+                                        {% if object.movie_director != '' and object.movie_director != None %}
+                                        {{ object.movie_director }}
+                                        {% else %}
+                                        ---
+                                        {% endif %}
+                                        </p>
+                                    </div>
+                                <div class="movie-file">
+                                    <p class="movie-rating-left left">
+                                        IDBM Rating:-
+                                    </p>
+                                    <p class="movie-rating-right right">
+                                        {% if object.movie_rating != '' and object.movie_rating != None %}
+                                        {{ object.movie_rating }}/10
+                                        {% else %}
+                                        ---
+                                        {% endif %}
+                                    </p>
+                                </div>
+                                <div class="movie-file">
+                                    <p class="movie-review-left left">
+                                        Review:-
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="movie-review">
+                            {% if object.movie_review != '' and object.movie_review != None %}
+                            {{ object.movie_review|capfirst }}
+                            {% else %}
+                            ---
+                            {% endif %}
+                            </p>
+                    </div>
+                </div>
+                <hr/>
+                <!--movie links botton  -->
+                <!--new block copy paste -->
+                <div class="trailer-box">
+                    <h1 class="trailer-heading">Trailer</h1>
+                    <div class="trailer-contain">
+                    <section id="video-box">
+                        {% if object.movie_trailer != '' and object.movie_trailer != None %}
+                        <iframe id="video" src="{{ object.movie_trailer }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+                        {% else %}
+                        <p>Trailer is coming soon.</p>
+                        {% endif %}
+
+                         <!-- if only one trailer is able show the review -->
+                        {% if object.movie_trailer_review != '' and object.movie_trailer_review != None %}
+                        <div class="trailer-review">
+                        <h1 class="trailer-heading">Trailer Review</h1>
+                        <p>{{ object.movie_trailer_review|capfirst }}</p>
+                        </div>
+                        {% endif %}
+                        <!-- trailer review end here -->
+                        <!-- secound trailer is here  -->
+                        {% if object.movie_trailer2 != '' and object.movie_trailer2 != None %}
+                        <iframe id="video" src="{{ object.movie_trailer }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen></iframe>
+                        {% endif %}
+
+                        <!--{{ object.movie_trailer }}-->
+                        <!-- secound trailer end -->
+                    </section>
+                    </div>
+                    </div>
+                </div>
+                <hr/>
+            {% if object.movie_story_short != '' and object.movie_story_short != None %}
+                <div class="story-box">
+                    <div class="short-story-headding">
+                        <h2>Synophsis</h2>
+                        <p>{{ object.movie_story_short}}</p>
+                    </div>
+                </div>
+                <hr/>
+            {% endif %}
+            {% if object.movie_story_long != '' and object.movie_story_long != None %}
+                <div class="story-box">
+                    <div class="short-story-headding">
+                        <h2>Full Story</h2>
+                        <p>Abc.....{{ bio|truncatewords:30 }}</p>
+                    </div>
+                </div>
+                <!--new copy paste end-->
+                <hr/>
+            {% endif %}
+            {% if object.movie_stream_link1_website != '' and object.movie_stream_link1_website != None %}
+            <div class="link-box">
+                    <p class="p">Streaming links</p>
+                    <div class="links">
+                    {% if object.movie_stream_link1_website != '' and object.movie_stream_link1_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_stream_link1_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_stream_link1 }}" target="_blank"><button class="download-button">
+                        Stream Now
+                    </button>
+                    </a>
+                    <!--<p class="website-adds">{{ object.movie_download_link1_adds }}</p>-->
+                </div>
+                </div>
+                        {% endif %}
+
+                    {% if object.movie_stream_link2_website != '' and object.movie_stream_link2_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_stream_link2_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_stream_link2 }}" target="_blank"><button class="download-button">
+                        Stream Now
+                    </button>
+                    </a>
+                    <!--<p class="website-adds">{{ object.movie_download_link2_adds }}</p>-->
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_stream_link3_website != '' and object.movie_stream_link3_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_stream_link3_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_stream_link3 }}" target="_blank"><button class="download-button">
+                        Stream Now
+                    </button>
+                    </a>
+                    <!--<p class="website-adds">{{ object.movie_download_link3_adds }}</p>-->
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_stream_link4_website != '' and object.movie_stream_link4_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_stream_link4_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_stream_link4 }}" target="_blank"><button class="download-button">
+                        Stream Now
+                    </button>
+                    </a>
+                    <!--<p class="website-adds">{{ object.movie_download_link4_adds }}</p>-->
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_stream_link5_website != '' and object.movie_stream_link5_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_stream_link5_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_stream_link5 }}" target="_blank"><button class="download-button">
+                        Stream Now
+                    </button>
+                    </a>
+                    <!--<p class="website-adds">{{ object.movie_download_link5_adds }}</p>-->
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_stream_link6_website != '' and object.movie_stream_link6_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_stream_link6_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_stream_link6 }}" target="_blank"><button class="download-button">
+                        Stream Now
+                    </button>
+                    </a>
+                    <!--<p class="website-adds">{{ object.movie_download_link6_adds }}</p>-->
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_stream_link7_website != '' and object.movie_stream_link7_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_stream_link7_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_stream_link7 }}" target="_blank"><button class="download-button">
+                        Stream Now
+                    </button>
+                    </a>
+                    <!--<p class="website-adds">{{ object.movie_download_link7_adds }}</p>-->
+                </div>
+                </div>
+                        {% endif %}
+
+
+                        {% if object.movie_stream_link8_website != '' and object.movie_stream_link8_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_stream_link8_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_stream_link8 }}" target="_blank"><button class="download-button">
+                        Stream Now
+                    </button>
+                    </a>
+                    <!--<p class="website-adds">{{ object.movie_download_link8_adds }}</p>-->
+                </div>
+                </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <hr/>
+            {% endif %}
+            {% if object.movie_download_link1_website != '' and object.movie_download_link1_website != None %}
+
+                <div class="link-box">
+                    <p class="p">Download links</p>
+                    <div class="links">
+                    {% if object.movie_download_link1_website != '' and object.movie_download_link1_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_download_link1_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_download_link1 }}" target="_blank"><button class="download-button">
+                        DOWNLOAD
+                    </button>
+                    </a>
+                    <p class="website-adds">{{ object.movie_download_link1_adds }}</p>
+                </div>
+                </div>
+                        {% endif %}
+
+                    {% if object.movie_download_link2_website != '' and object.movie_download_link2_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_download_link2_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_download_link2 }}" target="_blank"><button class="download-button">
+                        DOWNLOAD
+                    </button>
+                    </a>
+                    <p class="website-adds">{{ object.movie_download_link2_adds }}</p>
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_download_link3_website != '' and object.movie_download_link3_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_download_link3_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_download_link3 }}" target="_blank"><button class="download-button">
+                        DOWNLOAD
+                    </button>
+                    </a>
+                    <p class="website-adds">{{ object.movie_download_link3_adds }}</p>
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_download_link4_website != '' and object.movie_download_link4_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_download_link4_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_download_link4 }}" target="_blank"><button class="download-button">
+                        DOWNLOAD
+                    </button>
+                    </a>
+                    <p class="website-adds">{{ object.movie_download_link4_adds }}</p>
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_download_link5_website != '' and object.movie_download_link5_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_download_link5_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_download_link5 }}" target="_blank"><button class="download-button">
+                        DOWNLOAD
+                    </button>
+                    </a>
+                    <p class="website-adds">{{ object.movie_download_link5_adds }}</p>
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_download_link6_website != '' and object.movie_download_link6_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_download_link6_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_download_link6 }}" target="_blank"><button class="download-button">
+                        DOWNLOAD
+                    </button>
+                    </a>
+                    <p class="website-adds">{{ object.movie_download_link6_adds }}</p>
+                </div>
+                </div>
+                        {% endif %}
+
+                        {% if object.movie_download_link7_website != '' and object.movie_download_link7_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_download_link7_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_download_link7 }}" target="_blank"><button class="download-button">
+                        DOWNLOAD
+                    </button>
+                    </a>
+                    <p class="website-adds">{{ object.movie_download_link7_adds }}</p>
+                </div>
+                </div>
+                        {% endif %}
+
+
+                        {% if object.movie_download_link8_website != '' and object.movie_download_link8_website != None %}
+                    <div class="website-link">
+                        <p class="website-name">{{ object.movie_download_link8_website }}</p>
+                        <div class="website-button">
+                    <a href="{{ object.movie_download_link8 }}" target="_blank"><button class="download-button">
+                        DOWNLOAD
+                    </button>
+                    </a>
+                    <p class="website-adds">{{ object.movie_download_link8_adds }}</p>
+                </div>
+                </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <hr/>
+            {% endif %}
+            </div>
+        <!-- MAIN CONTANT STRAT -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!-- base html template  -->
+{% load static %}
+<html>
+    <head>
+    <title>MoviesColleaction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" media="all" />
+    <script type="text/javascript" src="{% static 'js/jquery-1.4.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-func.js' %}"></script>
+    </head>
+<body>
+    <!-- START PAGE SOURCE -->
+<div id="shell">
+    <div id="header">
+        <h1 id="logo"><a href="/">
+            <img id="logo-img" src="{% static 'css/images/logo_4_75.png' %}" alt="image"/>
+        </a></h1>
+       <!-- NAVIGATION -->
+        <div id="navigation">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a class="active" href="/series">SERIES</a></li>
+                <li><a href="/coming-soon">COMING SOON</a></li>
+                <li><a href="/vpn">VPN</a></li>
+                <li><a href="/contact-us">CONTACT US</a></li>
+            </ul>
+        </div>
+        <hr/>
+        <!-- SUB-NAVIGATION -->
+        <div id="sub-navigation">
+            <ul>
+                <li><a href="/latest-movies">Latest Movies</a></li>
+                <li><a href="/bollywood-movies">Bollywood Movies</a></li>
+                <li><a href="/hollywood-movies">Hollywood Movies</a></li>
+                <li><a href="/hd-movies">HD Movies</a></li>
+            </ul>
+        
+        <!-- SEARCH BAR -->
+        <div id="search">
+                    <form action="/search" method="GET" accept-charset="utf-8">
+                      <label for="search-field">SEARCH</label>
+                      <input type="text" name="q" placeholder="Enter search here" value="{{ request.GET.q }}" id="search-field" class="blink search-field"  />
+                      <input type="submit" value="GO!" class="search-button" />
+                    </form>
+                </div>
+            </div>
+        <hr/>
+    </div>
+    {% block content %}
+
+    {% endblock content %}
+    <!-- HEADER END -->
+    <!-- movie containt change here -->
+<!-- MAIN CONTANT STRAT -->
+</div>
+</body>
+
+</html>

@@ -1,0 +1,362 @@
+{% load static %}
+<html>
+    <head>
+        <title>MoviesColleaction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="en" />
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" media="all" />
+        <link rel="stylesheet" href="{% static 'css/vpn.css' %}" type="text/css" media="all" />
+        </head>
+    <body>
+        <div id="shell">
+            <div id="header">
+                <h1 id="logo"><a href="/">
+            <img id="logo-img" src="{% static 'css/images/logo_4_75.png' %}" alt="image"/>
+        </a></h1>
+               <!-- NAVIGATION -->
+                <div id="navigation">
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/series">SERIES</a></li>
+                        <li><a href="/coming-soon">COMING SOON</a></li>
+                        <li><a class="active" href="/vpn">VPN</a></li>
+                        <li><a href="/contact-us">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <hr/>
+                <!-- SUB-NAVIGATION -->
+                <div id="sub-navigation">
+                    <ul>
+                        <li><a href="/latest-movies">Latest Movies</a></li>
+                        <li><a href="/bollywood-movies">Bollywood Movies</a></li>
+                        <li><a href="/hollywood-movies">Hollywood Movies</a></li>
+                        <li><a href="/hd-movies">HD Movies</a></li>
+                    </ul>
+                
+                <!-- SEARCH BAR -->
+                <div id="search">
+                        <form action="/search" method="GET" accept-charset="utf-8">
+                          <label for="search-field">SEARCH</label>
+                          <input type="text" name="q" placeholder="Enter search here" value="{{ request.GET.q }}" id="search-field" class="blink search-field"  />
+                          <input type="submit" value="GO!" class="search-button" />
+                        </form>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <!-- main contant start here for vpn -->
+        <div class="main-page-contant">
+            <div class="vpn-box-page-title">
+                <h1 class="vpn-box-heading">Best Vpn list</h1>
+                <p>It's no surprise that free VPN downloads have become so popular. Installing a VPN gives your Windows PC, Mac, Android device or iPhone an extra layer of security. And the extra functionality that their URL-shifting nature gives - watching sports and TV in other countries, getting around geo-blocked websites, anonymous torrenting - means that there's little surprise free VPNs are so highly sought after.
+                    On this page, you'll find our pick of the best free Virtual Private Networking options available to download today. We've tested and retested dozens of them and assessed their ability to keep your online activity safe and anonymous without you having to spend a cent. That goes whether you're looking for the best free VPN for Android, iPhone, Mac or your Windows PC.
+                    <br/>
+                    Most free VPNs have limitations. These may include a limited choice of servers, slow connections, or capped data usage. More than 65% of the free VPNs we tested won’t let you stream or torrent, and some have deliberately slow connection speeds. While you may not pay anything, you’ll probably have a frustrating experience.
+Free VPNs make it seem like you’re getting a product for free. In reality, however, you could be the product. Many users reported to us that free VPN services stole their personal information and sold it to third parties.
+
+This raises another issue. Even a free VPN should help you stay anonymous online – but only a really safe one actually will. Unfortunately, many free VPNs pose serious risks to your security.
+
+Your information can only be sold if it’s stored. Many free services don’t have a no-logs policy, meaning they can track your data and put your privacy at risk. Free services are also notorious for spam, ads, and malware.
+
+We’ve seen a lot of good free VPN offers, and some seemed a little too good to be true. This raised our suspicions, so we investigated the more unrealistic providers.
+
+Shockingly, we discovered that many free VPNs are owned by China – the same Chinese government that imposes the world’s strictest censorship laws! In their privacy policies, some even specified that user data would be logged and could be shared. This is, frankly, shocking. To protect your privacy, stay away from any VPN owned by China.
+
+There’s one more very important reason to be careful of free VPNs. Businesses know that customers like our lives to be easy. They assume that if you like their limited free service, you’ll upgrade to their paid VPN later.
+
+The problem? The best free VPN doesn’t necessarily mean the best paid VPN. It certainly doesn’t mean the best value for money. Many free providers offer expensive plans with second-rate features, while other services don’t have a free trial but offer cheaper plans with better features. Sticking with your now-familiar provider could mean you end up paying more for less, and settling for a second-rate service instead of a top VPN.
+                </p>
+            </div>
+        <hr/>
+        <!-- first vpn box start copy -->
+        <div class="vpn-box-main">
+                <h2>Hotspot Shield</h2>
+
+            <div class="vpn-box">
+                    
+                <div class="vpn-right-img">
+                    <img src="https://www.vpnmentor.com/wp-content/uploads/2019/02/Screenshot-56.jpg" alt="vpn-image"/>
+                </div>
+                <div class="vpn-name">
+                    
+                    <p>Hotspot Shield is our top choice for a free VPN. The free version offers lightning-fast speeds as well as military-grade encryption, guaranteeing quick, secure browsing.
+
+                            Hotspot Shield is compatible with every operating system, has a no-logs policy, and offers dedicated tech support. You’ll be able to access geo-restricted content from anywhere, using any device.
+                            
+                            The free version gives you just 500 MB of data every day. While this isn’t enough for streaming Netflix or torrenting, it’s definitely enough for secure browsing on the go.
+                            
+                            You can add just one device to your free Hotspot Shield account, and access a very limited number of servers. The free version is supported by ads, so you’ll see plenty of them!</p>
+                    <h3 class="pros">Free Version Pros</h3>
+                    <div class="div-list">
+                    <ul>
+                        <li>Fast connection speeds</li>
+                        <li>No-logs policy</li>
+                        <li>Military-grade encryption</li>
+                    </ul>
+                </div>
+                    <h3 class="cons">Free Version Cons</h3>
+                    <div class="div-list">
+                    <ul>
+                        <li>No streaming</li>
+                        <li>Data limit: 500 MB/day</li>
+                        <li>Lots of ads</li>
+                    </ul>
+                </div>
+                </div>
+                <div class="vpn-link">
+                    <p><a href="https://www.hotspotshield.com/free-vpn/">Go To WebSite &#8680</a></p>
+                </div>
+            </div>
+            </div>
+            <hr/>
+            <!-- first vpn box end stop copying -->
+            <!-- copy start change data here or add new one -->
+            <div class="vpn-box-main">
+                    <h2>TunnelBear</h2>
+                <div class="vpn-box">
+                    <div class="vpn-right-img">
+                        <img src="https://cdn.mos.cms.futurecdn.net/foLVF7SWCiPHASSPEd28Bn-650-80.png" alt="vpn-image"/>
+                    </div>
+                    <div class="vpn-name">
+                        <p>TunnelBear might have something of a cutesy design, but it's a serious free VPN, especially after
+                            its acquisition by security giant, McAfee. There are free and paid-for subscriptions to choose from.
+                            The only restriction with the free plan is that you are limited to 500MB of traffic each month.
+                            This isn't a huge amount, so you won’t be able to use TunnelBear all of the time without paying,
+                            but it's great for those times when you feel like you need a little extra protection and want to go down the VPN free route.
+                            TunnelBear offers a range of paid-for plans that remove the restrictions associated with the free plan, like the download limit,
+                            the numbers of countries available and the amount of connected devices.  TechRadar has secured an exclusive deal from TunnelBear
+                            that gives you all this for as little as $4.99 per month, that's a whopping 58% saving.
+                            It’s also interesting to note that TunnelBear recently tuned up its privacy policy,
+                            so the VPN now collects even less data on users – removing the need to supply a first name to sign up,
+                             and ditching its record of the user’s number of total lifetime connections.</p>
+                        <h3 class="pros">Free Version Pros</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>Really user-friendly</li>
+                            <li>Both mobile and desktop clients</li>
+                            <li>Military-grade encryption</li>
+                        </ul>
+                    </div>
+                        <h3 class="cons">Free Version Cons</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>No streaming</li>
+                            <li>Not many options or settings</li>
+                            <li>Low  data limit</li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="vpn-link">
+                        <p><a href="https://www.tunnelbear.com/pricing">Go To WebSite &#8680</a></p>
+                        
+                    </div>
+                </div>
+                </div>
+            <div class="vpn-box-main">
+                    <h2>Windscribe</h2>
+                <div class="vpn-box">
+                    <div class="vpn-right-img">
+                        <img src="https://cdn.mos.cms.futurecdn.net/LEa4bfBvNEdCYiwTf9y6S8-650-80.jpg" alt="vpn-image"/>
+                    </div>
+                    <div class="vpn-name">
+                        <p>Windscribe is a relative newcomer to the free VPN scene, but its generous data allowance and commitment to protecting your privacy make it the best around if you need more data than the 500MB free tier with TunnelBear. You get 10GB bandwidth per month as standard and can choose from eight remote server locations with the Windscribe VPN free. You only need to create a username and password to sign up (an email address is optional, but might prove handy if you forget your password).
+
+Windscribe doesn’t store connection logs, IP stamps, or visited sites; when you’re actively connected to a server it stores your username, the VPN server you’re connected to and the amount of data transferred, but this is erased within three minutes of the session ending. Tweeting about the provider will earn you an extra 5GB, and you’ll get 1GB each time you invite a friend to join.
+
+As an added perk, if anyone you’ve referred decides to upgrade to a Pro subscription (starting at $7.50 per month billed annually), you’ll get the unlimited plan as well and far more servers (47 in total). If that isn’t enough to tempt you, there’s even a built-in adblocker and firewall. Give it a try today – we think you’ll be impressed. Note that there is an Android app which was recently released, albeit in an unfinished state at the time of writing.</p>
+                        <h3 class="pros">Free Version Pros</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>10GB of data per month</li>
+                            <li>Sterling privacy policy</li>
+                            <!--<li>Military-grade encryption</li>-->
+                        </ul>
+                    </div>
+                        <h3 class="cons">Free Version Cons</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>No Android client</li>
+                            <!--<li>Not many options or settings</li>-->
+                            <!--<li>Low  data limit</li>-->
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="vpn-link">
+                        <p><a href="https://windscribe.com/upgrade">Go To WebSite &#8680</a></p>
+
+                    </div>
+                </div>
+                </div>
+            <div class="vpn-box-main">
+                    <h2>Speedify</h2>
+                <div class="vpn-box">
+                    <div class="vpn-right-img">
+                        <img src="https://cdn.mos.cms.futurecdn.net/PvLpneJMhepcT8gRmjct47-650-80.jpg" alt="vpn-image"/>
+                    </div>
+                    <div class="vpn-name">
+                        <p>Speedify, as the name suggests, has one main aim as a free VPN provider: to ensure that while you benefit from encryption, your internet connection remains as speedy as possible. To that end, this provider will make use of all available internet connections to get the best possible performance, potentially combining, say, an Ethernet connection (fixed broadband) with a tethered mobile 3G/4G connection. Even if you only have one type of internet connection, the firm claims its turbocharging technology will still help speed things up.
+
+The free plan boasts full access to those servers (just as with the subscription options), the only restriction of the free offering being that you’re limited in the amount of data you can download. Free users get 4GB of data for the first month, but that drops to 1GB during subsequent months. That’s not a huge allowance, and certainly not as much as some other rivals you’ll see elsewhere on this page, but it’s more than some, and still enough for covering some basic surfing and email duties. And this VPN provider is definitely worth a look on the performance front, as during our testing, the aforementioned speed-granting technologies did actually prove themselves to have a positive effect.</p>
+                        <h3 class="pros">Free Version Pros</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>Nifty performance boosting tech</li>
+                            <li>Solid on the privacy front</li>
+                            <!--<li>Military-grade encryption</li>-->
+                        </ul>
+                    </div>
+                        <h3 class="cons">Free Version Cons</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>Only 1GB monthly data allowance</li>
+                            <li>Software has few low-level controls</li>
+                            <!--<li>Low  data limit</li>-->
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="vpn-link">
+                        <p><a href="https://speedify.com/">Go To WebSite &#8680</a></p>
+
+                    </div>
+                </div>
+                </div>
+            <div class="vpn-box-main">
+                    <h2>ProtonVPN Free</h2>
+                <div class="vpn-box">
+                    <div class="vpn-right-img">
+                        <img src="https://cdn.mos.cms.futurecdn.net/r439TtjbkHFihF6ZDZaTDZ-650-80.jpg" alt="vpn-image"/>
+                    </div>
+                    <div class="vpn-name">
+                        <p>ProtonVPN is another provider that offers a free VPN alongside a paid option, but the former has some very strong points, the most notable of which is that it doesn’t impose any bandwidth restrictions. In other words, you’re free to use as much data as you want every month. There are, naturally enough, limitations for the free plan to incentivize upgrading to the paid offering. And ProtonVPN Free’s restrictions include limiting you to only one device, only three locations, and free users get a lower priority when it comes to speed compared to paying subscribers. There’s no P2P support either. But if you can live with that, this is an impressive provider with a strict no logging policy, and you can sign up with nothing more than your email address. There aren’t even any ads on the website, let alone the client.
+
+Speaking of clients, there are a good range of these – with native software for Windows PC, Mac, Linux, iOS, plus Android – and we found performance levels were pretty solid too. However, speeds may drop at peak times when lots of users are around and paying folks get priority; at which point you may be tempted to upgrade to a paid plan. But clearly, with its unlimited data allowance, this is one freebie which is well worth considering.
+                            It’s also interesting to note that TunnelBear recently tuned up its privacy policy,
+                            so the VPN now collects even less data on users – removing the need to supply a first name to sign up,
+                             and ditching its record of the user’s number of total lifetime connections.</p>
+                        <h3 class="pros">Free Version Pros</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>No monthly data limits</li>
+                            <li>Great on the privacy front</li>
+                            <!--<li>Military-grade encryption</li>-->
+                        </ul>
+                    </div>
+                        <h3 class="cons">Free Version Cons</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>One device limit</li>
+                            <li>Only three locations to choose from</li>
+                            <!--<li>Low  data limit</li>-->
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="vpn-link">
+                        <p><a href="https://account.protonvpn.com/signup">Go To WebSite &#8680</a></p>
+
+                    </div>
+                </div>
+                </div>
+            <div class="vpn-box-main">
+                    <h2>Hide.me</h2>
+                <div class="vpn-box">
+                    <div class="vpn-right-img">
+                        <img src="https://cdn.mos.cms.futurecdn.net/4NXFm89WXQTVG9xu9TpPyR-650-80.jpg" alt="vpn-image"/>
+                    </div>
+                    <div class="vpn-name">
+                        <p>Hide.me offers both paid and free VPN providers, with the latter giving you 2GB of data per month to play with. There are other limits too: you can only connect a maximum of one device, and are limited to three server locations (Singapore, Canada, and Netherlands) rather than the 30 locations paying subscribers get. On the plus side, however, this provider won’t throttle the connection speed of free users, and Hide.me further promises that it keeps no logs and stores no user data, so won’t pass on any data to third-parties in order to try and make a profit (simply because it doesn’t have any data to pass on). There are no adverts here, either.
+
+You get native software for Windows PC and Mac, Android and iOS, with the Windows client being smartly designed, plus there’s 24/7 technical support (which is in place even for free users). Performance was impressive in our testing, too. Overall, then, this is a more-than-solid free offering which tries to maintain your privacy, without too many restrictions.</p>
+                        <h3 class="pros">Free Version Pros</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>Strong on privacy</li>
+                            <li>No adverts or speed throttling</li>
+                            <!--<li>Military-grade encryption</li>-->
+                        </ul>
+                    </div>
+                        <h3 class="cons">Free Version Cons</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>Limited to one device</li>
+                            <li>Only three locations</li>
+                            <!--<li>Low  data limit</li>-->
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="vpn-link">
+                        <p><a href="https://hide.me/en/">Go To WebSite &#8680</a></p>
+
+                    </div>
+                </div>
+                </div>
+            <div class="vpn-box-main">
+                    <h2>SurfEasy (Opera Free VPN)</h2>
+                <div class="vpn-box">
+                    <div class="vpn-right-img">
+                        <img src="https://cdn.mos.cms.futurecdn.net/6ET4667MvmQdjbqekHzig5-650-80.jpg" alt="vpn-image"/>
+                    </div>
+                    <div class="vpn-name">
+                        <p>SurfEasy is a Canadian-based free VPN from the same organization responsible for the Opera web browser, and indeed it’s bundled within Opera as an integrated VPN. There are both paid and free offerings, with the latter not restricting the amount of devices you can use – free users can hook up a maximum of five devices simultaneously, just like paid subscribers. You also get 1,000 servers across 25 countries, and a very user-friendly Windows PC client. Performance is solid enough, although we found that some longer distance trips to more remote servers (i.e. the US) could be rather sluggish.
+
+The main restriction here is a monthly data limit of 500MB, which means you won’t get very much mileage out of this VPN on a free basis, and it’s really for very light or occasional use only (or testing it if you’re looking at signing up for a paid plan). It’s important to note, though, that if you’re using the Opera browser with its integrated VPN, there’s no data limit here (at least for protecting your browsing activities). Which could be a compelling argument to switch from the likes of Chrome or Firefox.</p>
+                        <h3 class="pros">Free Version Pros</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>Five simultaneous devices allowed</li>
+                            <li>User-friendly client</li>
+                            <!--<li>Military-grade encryption</li>-->
+                        </ul>
+                    </div>
+                        <h3 class="cons">Free Version Cons</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>500MB monthly data limit</li>
+                            <li>Performance not so hot over longer hops</li>
+                            <!--<li>Low  data limit</li>-->
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="vpn-link">
+                        <p><a href="https://www.surfeasy.com/">Go To WebSite &#8680</a></p>
+
+                    </div>
+                </div>
+                </div>
+            <div class="vpn-box-main">
+                    <h2>PrivateTunnel</h2>
+                <div class="vpn-box">
+                    <div class="vpn-right-img">
+                        <img src="https://cdn.mos.cms.futurecdn.net/UDpNY4uTBsfNwc4YkGaoTg-650-80.jpg" alt="vpn-image"/>
+                    </div>
+                    <div class="vpn-name">
+                        <p>Like some of the other free VPN providers featured in this roundup,
+                            PrivateTunnel is available for a number of platforms – specifically Windows PC, Mac, Android and iOS. Another characteristic shared with many of its contemporaries is the existence of a limited, free package in addition to paid-for subscriptions. Well, sort of. Rather than offering a traditional monthly subscription package, you are instead provided with 200MB of non-expiring data to use as you want. When this runs out, you can purchase more data in bundles of 20GB or 100GB. If you feel that you'd like to use PrivateTunnel all the time, you can opt for a $30 per year package which give you unlimited data – see the 200MB as something of a taster session to see if you like everything. As a VPN, PrivateTunnel works fairly well, although connections can be a little temperamental at times. It's all very easy to use, so there's little reason not to take it for a test drive.</p>
+                        <h3 class="pros">Free Version Pros</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>Wide range of clients</li>
+                            <li>Simple to use</li>
+                            <!--<li>Military-grade encryption</li>-->
+                        </ul>
+                    </div>
+                        <h3 class="cons">Free Version Cons</h3>
+                        <div class="div-list">
+                        <ul>
+                            <li>Limited choice of locations</li>
+                            <li>Inconsistent performance at times</li>
+                            <!--<li>Low  data limit</li>-->
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="vpn-link">
+                        <p><a href="https://www.privatetunnel.com/">Go To WebSite &#8680</a></p>
+
+                    </div>
+                </div>
+                </div>
+                <hr/>
+                <!-- end copy -->
+        </div>
+        </div>
+    </body>

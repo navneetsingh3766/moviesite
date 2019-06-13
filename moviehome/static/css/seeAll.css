@@ -1,0 +1,30 @@
+.pages a{
+    font-size: 20px;
+    text-style: none;
+    text-align: center;
+    margin-top: 20px;
+    padding:5px;
+    color: #f3901e;
+}
+.pages{
+    width: 100%;
+    text-style:none;
+    text-align: center;
+    margin-top: 20px;
+    color: #f3901e;
+    }
+.current{
+    font-size: 12px;
+    width: 100%;
+    text-style:none;
+    text-align: center;
+    margin-top: 10px;
+    color: #fff;
+    }
+.pagination div{
+    display: inline;
+    text-style:none;
+    text-align: center;
+    margin-top: 10px;
+    color: #f3901e;
+    }

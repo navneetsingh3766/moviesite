@@ -1,0 +1,155 @@
+.box{
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.box-head{
+	width: 100%;
+	text-align: left;
+	color: #eb9665;
+}
+.movie-box{
+	margin-top: 10px;
+	display: inline-flex;
+	margin-right: 1%;
+	width: 15%;
+}
+.movie-block{
+	display: flex;
+	flex-direction: column;
+}
+.movie-image{
+	position:relative;
+	width:100%;
+}
+.movie-image img{
+	width: 100%;
+	height: 15vw;
+}
+
+/* understant this just copy paste */
+
+.movie-image a {
+	float:left;
+	display:inline;
+	width:100%;
+	height:15vw;
+	position:relative;
+	z-index:2;
+}
+.play {
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+	/* width:100%;
+	height:15vw;
+	background:url('images/image-hover.png') no-repeat 0 0; */
+	display:block;
+	z-index:5;
+	cursor:pointer;
+	display:none;
+}
+/* .play:after {
+    content: '\A';
+    position: absolute;
+    width: 100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}*/
+.play:hover {
+    opacity: 1;
+} 
+.name {
+	font-weight:bold;
+	color:#fff;
+	font-size:14px;
+	text-align:center;
+	padding-top:50%;
+	display:block;
+}
+
+/* end here */
+.movie-name{
+	margin-top: 5px;
+	padding-top: 5px;
+	text-align: left;
+}
+.movie-quality{
+	text-align: left;
+	padding-top: 5px;
+	color: #7cf15e;
+}
+.rating{
+	width: 100%;
+	display: flex;
+	margin-top: 5px;
+}
+.idbm{
+	color:#f1df37;
+}
+.star{
+	margin-left:1vw;
+}
+.box-end{
+	margin-top:-5px;
+	font-size: 14px;
+	width: 100%;
+	text-align: right;
+}
+.box-end a{
+	text-decoration: none;
+	color: #eb9665;
+}
+.box-end a:hover{
+	text-decoration: underline;
+}
+@media(max-width:460px){
+	.box{
+		width: 100%;
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+	.box-head{
+	width: 100%;
+	font-size:20px;
+    }
+	.movie-box{
+		height: auto;
+		width: 70%; 
+		text-align: center;
+		margin-left: 10%;
+		
+	}
+	.movie-image{
+		margin-top: 10px;
+		height: 250px;
+	}
+	.movie-image img{
+		width: 100%;
+		height: 250px;
+		
+	}
+	.box-end{
+		margin-top:5px;
+		font-size: 14px;
+		width: 100%;
+		text-align: center;
+	}
+	.play{
+		display: hidden;
+	}
+	.name{
+		display: hidden;
+	}
+	
+}

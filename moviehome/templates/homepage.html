@@ -1,0 +1,314 @@
+{% load static %}
+<html>
+    <head>
+    <title>MoviesColleaction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}" type="text/css" media="all" />
+    <script type="text/javascript" src="{% static 'js/jquery-1.4.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-func.js' %}"></script>
+    </head>
+<body>
+    <!-- START PAGE SOURCE -->
+<div id="shell">
+    <div id="header">
+        <h1 id="logo"><a href="/">
+            <img id="logo-img" src="{% static 'css/images/logo_4_75.png' %}" alt="image"/>
+        </a></h1>       <!-- NAVIGATION -->
+        <div id="navigation">
+            <ul>
+                <li><a class="active" href="/">HOME</a></li>
+                <li><a href="/series">SERIES</a></li>
+                <li><a href="/coming-soon">COMING SOON</a></li>
+                <li><a href="/vpn">VPN</a></li>
+                <li><a href="/contact-us">CONTACT US</a></li>
+            </ul>
+        </div>
+        <hr/>
+        <!-- SUB-NAVIGATION -->
+        <div id="sub-navigation">
+            <ul>
+                <li><a href="/latest-movies">Latest Movies</a></li>
+                <li><a href="/bollywood-movies">Bollywood Movies</a></li>
+                <li><a href="/hollywood-movies">Hollywood Movies</a></li>
+                <li><a href="/hd-movies">HD Movies</a></li>
+            </ul>
+        
+        <!-- SEARCH BAR -->
+        <div id="search">
+                <form action="/search" method="GET" accept-charset="utf-8">
+                  <label for="search-field">SEARCH</label>
+                  <input type="text" name="q" placeholder="Enter search here" value="{{ request.GET.q }}" id="search-field" class="blink search-field"  />
+                  <input type="submit" value="GO!" class="search-button" />
+                </form>
+            </div>
+        </div>
+        <hr/>
+    </div>
+    <!-- HEADER END -->
+    <!-- main page start -->
+    <div id="main">
+        <div id="content">
+            <!-- full page content -->
+            <!-- one type movie list -->
+            <div class="box">
+                <div class="box-head">
+                    <h4>LATEST MOVIES</h4>
+                </div>
+                <!-- ONE LOOP APPLY HERE -->
+                {% for movie in latestMovies|slice:":6" %}
+                <div class="movie-box">
+                    <div class="movie-block">
+                    <div class="movie-image">
+                        <!-- replace the links -->
+                        <a href="/details/{{ movie.movie_details_page }}">
+                        <span class="play">
+                            <span class="name">
+                                {{ movie.movie_name|title }}
+                            </span>
+                        </span>
+                    <img src="{{ movie.movie_image_url }}" alt="{{ movie.movie_name }} image"/>
+                    </a>
+                    </div>
+                    <div class="movie-details">
+                    <div class="movie-name">
+                        <p>{{ movie.movie_name|title }}</p>
+                    </div>
+                    <div class="movie-quality">
+                        <p>{{ movie.movie_quality|upper }}</p>
+                    </div>
+                    <div class="rating">
+                        <p class="idbm">IDBM</p>
+                        <p class="star" style="color:#ffcc00;">&#9733;</p>
+                        <p>{{ movie.movie_rating }}/10</p>
+                    </div>
+                </div>
+                </div>
+                </div>
+                {% endfor %}
+                <!-- ONE LOOP END HERE -->
+                <!-- DELETE START THIS -->
+                <!-- DELETE END -->
+                <!-- change link here -->
+                <div class="box-end">
+                    <p><a href="/latest-movies">See all</a></p>
+                </div>
+            </div>
+            <hr/>
+
+            <div class="box">
+                <div class="box-head">
+                        <h4>BOLLYWOOD MOVIES</h4>
+                </div>
+                <!-- SECOUND LOOP START -->
+                {% for movie in moviesHindi|slice:":6" %}
+                <div class="movie-box">
+                    <div class="movie-block">
+                    <div class="movie-image">
+                        <!-- replace the links -->
+                        <a href="/details/{{ movie.movie_details_page }}">
+                        <span class="play">
+                            <span class="name">
+                                {{ movie.movie_name|title }}
+                            </span>
+                        </span>
+                    <img src="{{ movie.movie_image_url }}" alt="{{ movie.movie_name }} image"/>
+                    </a>
+                    </div>
+                    <div class="movie-details">
+                    <div class="movie-name">
+                        <p>{{ movie.movie_name|title }}</p>
+                    </div>
+                    <div class="movie-quality">
+                        <p>{{ movie.movie_quality|upper }}</p>
+                    </div>
+                    <div class="rating">
+                        <p class="idbm">IDBM</p>
+                        <p class="star" style="color:#ffcc00;">&#9733;</p>
+                        <p>{{ movie.movie_rating }}/10</p>
+                    </div>
+                </div>
+                </div>
+                </div>
+                {% endfor %}
+                <!-- SECOUND LOOP END -->
+                <!-- DELETE START -->
+                <!-- DELETE END -->
+                <!-- change link here -->
+                <div class="box-end">
+                        <p><a href="/bollywood-movies">See all</a></p>
+                </div>
+             </div>
+                <hr/>
+            <div class="box">
+                <div class="box-head">
+                            <h4>HOLLYWOOD MOVIES</h4>
+                    </div>
+                <!-- THREID LOOP START -->
+                {% for movie in moviesEnglish|slice:":6" %}
+                <div class="movie-box">
+                           <div class="movie-block">
+                    <div class="movie-image">
+                        <!-- replace the links -->
+                        <a href="/details/{{ movie.movie_details_page }}">
+                        <span class="play">
+                            <span class="name">
+                                {{ movie.movie_name|title }}
+                            </span>
+                        </span>
+                    <img src="{{ movie.movie_image_url }}" alt="{{ movie.movie_name }} image"/>
+                    </a>
+                    </div>
+                    <div class="movie-details">
+                    <div class="movie-name">
+                        <p>{{ movie.movie_name|title }}</p>
+                    </div>
+                    <div class="movie-quality">
+                        <p>{{ movie.movie_quality|upper }}</p>
+                    </div>
+                    <div class="rating">
+                        <p class="idbm">IDBM</p>
+                        <p class="star" style="color:#ffcc00;">&#9733;</p>
+                        <p>{{ movie.movie_rating }}/10</p>
+                    </div>
+                </div>
+                </div>
+                    </div>
+                {% endfor %}
+                <!-- THREID LOOP END -->
+                <!-- DELETE START -->
+                <!-- DELETE END -->
+                <!-- change link here -->
+                <div class="box-end">
+                    <p><a href="/hollywood-movies">See all</a></p>
+                </div>
+            </div>
+                <hr/>
+            <div class="box">
+                <div class="box-head">
+                            <h4>DUAL AUDIO MOVIES</h4>
+                    </div>
+                <!-- THREID LOOP START -->
+                {% for movie in dualAudio|slice:":6" %}
+                <div class="movie-box">
+                           <div class="movie-block">
+                    <div class="movie-image">
+                        <!-- replace the links -->
+                        <a href="/details/{{ movie.movie_details_page }}">
+                        <span class="play">
+                            <span class="name">
+                                {{ movie.movie_name|title }}
+                            </span>
+                        </span>
+                    <img src="{{ movie.movie_image_url }}" alt="{{ movie.movie_name }} image"/>
+                    </a>
+                    </div>
+                    <div class="movie-details">
+                    <div class="movie-name">
+                        <p>{{ movie.movie_name|title }}</p>
+                    </div>
+                    <div class="movie-quality">
+                        <p>{{ movie.movie_quality|upper }}</p>
+                    </div>
+                    <div class="rating">
+                        <p class="idbm">IDBM</p>
+                        <p class="star" style="color:#ffcc00;">&#9733;</p>
+                        <p>{{ movie.movie_rating }}/10</p>
+                    </div>
+                </div>
+                </div>
+                    </div>
+                {% endfor %}
+                <!-- THREID LOOP END -->
+                <!-- DELETE START -->
+                <!-- DELETE END -->
+                <!-- change link here -->
+                <div class="box-end">
+                    <p><a href="/dual_audio">See all</a></p>
+                </div>
+            </div>
+                <hr/>
+            <div class="box">
+                <div class="box-head">
+                                <h4>HD MOVIES</h4>
+                    </div>
+                <!-- FOUR LOOP START -->
+                {% for movie in hdMovies|slice:":6" %}
+                <div class="movie-box">
+                                <div class="movie-block">
+                    <div class="movie-image">
+                        <!-- replace the links -->
+                        <a href="/details/{{ movie.movie_details_page }}">
+                        <span class="play">
+                            <span class="name">
+                                {{ movie.movie_name|title }}
+                            </span>
+                        </span>
+                    <img src="{{ movie.movie_image_url }}" alt="{{ movie.movie_name }} image"/>
+                    </a>
+                    </div>
+                    <div class="movie-details">
+                    <div class="movie-name">
+                        <p>{{ movie.movie_name|title }}</p>
+                    </div>
+                    <div class="movie-quality">
+                        <p>{{ movie.movie_quality|upper }}</p>
+                    </div>
+                    <div class="rating">
+                        <p class="idbm">IDBM</p>
+                        <p class="star" style="color:#ffcc00;">&#9733;</p>
+                        <p>{{ movie.movie_rating }}/10</p>
+                    </div>
+                </div>
+                </div>
+                    </div>
+                {% endfor %}
+                <!-- FOUR LOOP END -->
+                <!-- DELETE START -->
+                <!--- <div class="movie-box">
+                    <div class="movie-block">
+                    <div class="movie-image">
+                        <a href="https://google.com">
+                        <span class="play">
+                            <span class="name">
+                                movie name
+                            </span>
+                        </span>
+                    <img src="css/images" alt="movie image"/>
+                    </a>
+                    </div>
+                    <div class="movie-name">
+                        <p>MOVIE NAME IS HERE PLEASE REPLACE THIS</p>
+                    </div>
+                    <div class="movie-quality">
+                        <p>HD OR HDCam</p>
+                    </div>
+                    <div class="rating">
+                            <p class="idbm">IDBM</p>
+                            <p class="star">*</p>
+                            <p>7.9/10</p>
+                        </div>
+                    </div>
+                    </div> -->
+                <!-- DELETE END -->
+                <!-- change link here -->
+                <div class="box-end">
+                    <p><a href="/hd-movies">See all</a></p>
+                    </div>
+            </div>
+            <hr/>
+         </div>
+        <div id="footer">
+            <!-- footer here -->
+            <footer>Created and Desing by Navneet Singh</footer>
+        </div>
+
+    </div>
+    <!-- movie containt change here -->
+<!-- MAIN CONTANT STRAT -->
+</div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+{% load static %}
+
+<!-- base html template  -->
+<html>
+    <head>
+    <title>MoviesColleaction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/contact-us.css' %}" type="text/css" media="all" />
+    </head>
+<body>
+    <!-- START PAGE SOURCE -->
+<div id="shell">
+    <div id="header">
+       <h1 id="logo"><a href="/">
+            <img id="logo-img" src="{% static 'css/images/logo_4_75.png' %}" alt="image"/>
+        </a></h1>
+       <!-- NAVIGATION -->
+        <div id="navigation">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/series">SERIES</a></li>
+                <li><a href="/coming-soon">COMING SOON</a></li>
+                <li><a href="/vpn">VPN</a></li>
+                <li><a class="active" href="/contact-us">CONTACT US</a></li>
+            </ul>
+        </div>
+        <hr/>
+        <!-- SUB-NAVIGATION -->
+        <div id="sub-navigation">
+            <ul>
+                <li><a href="/latest-movies">Latest Movies</a></li>
+                <li><a href="/bollywood-movies">Bollywood Movies</a></li>
+                <li><a href="/hollywood-movies">Hollywood Movies</a></li>
+                <li><a href="/hd-movies">HD Movies</a></li>
+            </ul>
+
+        <!-- SEARCH BAR -->
+        <div id="search">
+                <form action="/search" method="GET" accept-charset="utf-8">
+                  <label for="search-field">SEARCH</label>
+                  <input type="text" name="q" placeholder="Enter search here" value="{{ request.GET.q }}" id="search-field" class="blink search-field"  />
+                  <input type="submit" value="GO!" class="search-button" />
+                </form>
+            </div>
+        </div>
+        <hr/>
+    </div>
+    <!-- HEADER END -->
+    <!-- contact page start  -->
+    <!-- porfolio page copy  -->
+    <!---contact start--->
+<div id="contact" class="contact">
+        <div class="header">
+            <h1><u>Follow Us</u></h1>
+          <!--<p>How do you take your coffee?</p>-->
+        </div>
+    <!--replace links for contacting us page -->
+         <a href="https://facebook.com/navneet.singh.3766" target="_blank" class="contact-details">Facebook</a>
+        <a id='profile-link' href="https://Instagram.com/navneet_singh.3766" target="_blank" class="contact-details">Instagram</a>
+        <!--<a href="https://spanchat.com/" target="_blank" class="contact-details">SpanChat</a>-->
+        <a href="mailto:navneet.singh.3766@gmail.com" target="_blank" class="contact-details">Send a mail</a>
+        <a href="https://pinterest.com/" target="_blank" class="contact-details">Pinterest</a>
+      </div>
+      <!-- porfolio page copy end -->
+      <!-- contact form start -->
+    <div class="contact-page-main">
+        <h1>Contact Us</h1>
+        <h3>fill out form below</h3>
+        <div class="contact-box">
+            <form id="contact-form" method="post" action="/thank-you/">
+                {% csrf_token %}
+                <p>Let us know what you want</p>
+                <!-- name field -->
+                <div class="row" >
+                    <div class="leftname">
+                    <lable id="name-label" for="name" >*Name:</lable></div>
+                   <div class="rightname"><input id ="name" autofocus type="text" name="name" class="input-field" placeholder="Enter Full Name" requried>
+                    </div>
+                   </div>
+                 <!----email--->
+                <div class="row">
+                    <div class="leftname">
+                <lable id="email-label" for="email">*Email:</lable>  </div>
+                    <div class="rightname"> <input id="email" type="email" name="email" placeholder="ex:abcd@efg.com" class="input-field" requried></div>
+                
+                </div >
+                <!-- comments---->
+                <div class="row">
+                        <div class="leftname">
+                        <lable for="comment" >*Any Comments or Suggestions? </lable>
+                        </div>
+                        <div class="rightname">
+                        <textarea type="text" 
+                                class="comment"
+                                name="comment" placeholder="Enter your comment here...." requried></textarea>
+                        </div>
+                    </div>
+                    <button id="submit" type="submit"
+                class="submit"
+                >Submit</button>
+
+            </form>
+        </div>
+    </div>
+    <!-- MAIN CONTANT STRAT -->
+</div>
+</body>
+
+</html>

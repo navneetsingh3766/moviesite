@@ -1,0 +1,147 @@
+body{
+    text-align: center;
+}
+.contact-page-main{
+  margin-top: 10px;
+  padding:10px;
+}
+.contact-page-main h1{
+    color:#fff;
+    margin-top: 10px;
+    text-decoration: underline;
+    text-transform: bold;
+}
+
+.contact-page-main h3{
+    margin-top: 10px;
+}
+.contact-box{
+    margin:0 auto;
+    /* width:80%; */
+    max-width:833px;
+    padding: 10px;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(243, 236, 236, 0.616);
+    color: black;
+}
+/* name field copy */
+.leftname{
+    display:inline-block;
+    text-align:right;
+    width:45%;
+     margin-top:28px;
+    vertical-align:top;
+    
+  }
+  .rightname{
+    display:inline-block;
+    text-align:left;
+     margin-top:16px;
+    width:49%;
+    vertical-align: middle;
+  }
+  .input-field{
+    width:280px;
+    height: 18px;
+    padding: 6px;
+    margin: 5px;
+    border: 1px solid #F44336;
+    border-radius: 2px;
+  }
+  .comment{
+    width:210px;
+    height:80px;
+    margin-left:10px;
+    margin-top:10px;
+  }
+  .submit{
+    background-color:rgb(10, 10, 9);
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    height: 40px;
+    width: 96px;
+    margin: 10px;
+    border: 0px solid;
+  }
+  .submit:hover{
+    background-color: rgb(218, 35, 35);
+  }
+  .submit:active{
+    background-color: #fff;
+    color: black;
+  }
+  @media(max-width:1200px){
+    .leftname{
+      /* display:inline-block;
+      text-align:right;
+      width:45%;
+       margin-top:28px;
+      vertical-align:top; */
+      
+    }
+    .rightname{
+      /* display:inline-block;
+      text-align:left;
+       margin-top:16px;
+      width:49%;
+      vertical-align: middle; */
+    }
+    .input-field{
+      padding-left: 10px;
+      width:100%;
+      height: 18px;
+      padding: 6px;
+      margin: 5px;
+      border: 1px solid #F44336;
+      border-radius: 2px;
+    }
+    .comment{
+      width:100%;
+      height:80px;
+      margin-left:10px;
+      margin-top:10px;
+    }
+  }
+  /* porfolio page copy */
+  #contact{
+    height:auto;
+    width:100%;
+    @media(max-width:900px){
+      height:100%;
+    }
+  }
+  .contact{
+    /* background-image: url(https://images.unsplash.com/photo-1422207258071-70754198c4a2?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=d6d417e7aaa84bfacba8b96f226b75be);  background-size: 100% 100%; */
+      background-repeat: no-repeat;
+      @media(max-width:900px){
+        background-color:#9E9E9E;
+        background-image:none;
+      }
+    }
+    .header{
+      margin:auto;
+      color:#EEEEEE;
+      font-weight:800;
+      margin:80px;
+    }
+    /* .header h1{
+      padding-top:130px;
+      margin:10px;
+    } */
+    .contact-details{
+      display: inline-block;
+      font-weight: bold;
+      height:100px;
+      width:100px;
+        list-style-type: none;
+      text-decoration:none;
+      margin:0px 35px 45px 35px;
+      border:2px solid #FFF59D;
+      color:white;
+      border-radius:100%;
+      line-height:100px;
+      
+    }
