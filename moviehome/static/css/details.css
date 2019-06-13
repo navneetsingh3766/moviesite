@@ -45,7 +45,7 @@
     padding-top: 3%;
     display: inline;
 }
-img{
+.movie-details img{
     float: left;
     width: 20%;
     height: auto;

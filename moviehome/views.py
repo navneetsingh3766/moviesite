@@ -5,7 +5,7 @@ from .models import MovieDetails, UpcomingDetails, UserInfo
 
 
 def homepage(request):
-    revers = MovieDetails.objects.all().order_by('-id')
+    revers = MovieDetails.objects.all().order_by('-movie_release_date')
     movieshindi = revers.filter(movie_type_hindi=True)
     moviesenglish = revers.filter(movie_type_english=True)
     dualaudios = revers.filter(movie_audio_dual=True)
@@ -21,7 +21,7 @@ def homepage(request):
 
 
 def latestmovie(request):
-    data = MovieDetails.objects.all().order_by('-id')
+    data = MovieDetails.objects.all().order_by('-movie_release_date')
     paginator = Paginator(data, 30)
     page = request.GET.get('page')
     movies = paginator.get_page(page)
@@ -33,7 +33,7 @@ def latestmovie(request):
 
 
 def latesthindi(request):
-    data = MovieDetails.objects.all().order_by('-id')
+    data = MovieDetails.objects.all().order_by('-movie_release_date')
     data = data.filter(movie_type_hindi=True)
     paginator = Paginator(data, 30)
     page = request.GET.get('page')
@@ -46,7 +46,7 @@ def latesthindi(request):
 
 
 def latestenglish(request):
-    data = MovieDetails.objects.all().order_by('-id')
+    data = MovieDetails.objects.all().order_by('-movie_release_date')
     data = data.filter(movie_type_english=True)
     paginator = Paginator(data, 30)
     page = request.GET.get('page')
@@ -59,7 +59,7 @@ def latestenglish(request):
 
 
 def dualaudio(request):
-    data = MovieDetails.objects.all().order_by('-id')
+    data = MovieDetails.objects.all().order_by('-movie_release_date')
     data = data.filter(movie_audio_dual=True)
     paginator = Paginator(data, 30)
     page = request.GET.get('page')
@@ -72,7 +72,7 @@ def dualaudio(request):
 
 
 def hdmovies(request):
-    data = MovieDetails.objects.all().order_by('-id')
+    data = MovieDetails.objects.all().order_by('-movie_release_date')
     data = data.filter(movie_quality_hd=True)
     paginator = Paginator(data, 30)
     page = request.GET.get('page')
@@ -109,7 +109,7 @@ def vpn(request):
 
 
 def search(request):
-    data = MovieDetails.objects.all().order_by('-id')
+    data = MovieDetails.objects.all().order_by('-movie_release_date')
     coming_movie_data = UpcomingDetails.objects.all().order_by('movie_release_date')
     query = request.GET.get("q")
     if query:
@@ -162,4 +162,3 @@ def thankyou(request):
         return render(request, 'thankyou.html', {})
     else:
         return redirect('/contact-us/')
-
