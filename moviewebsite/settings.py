@@ -29,9 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 #my comment
-# STATICFILES_DIRS = [
-#     "/moviehome/static/"
-# ]
+STATICFILES_DIRS = [
+    "/moviehome/static/"
+]
 # Application definition
 
 INSTALLED_APPS = [
@@ -121,12 +121,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/moviehome/static/'
-STATICFILES_DIRS = (
-os.path.join(BASE_DIR, 'static'),
-)
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = '/moviehome/static/'
+# STATICFILES_DIRS = (
+# os.path.join(BASE_DIR, 'static'),
+# )
 
 
 # STATIC_URL = '/static/'
