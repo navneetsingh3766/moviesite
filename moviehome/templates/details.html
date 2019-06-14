@@ -142,7 +142,7 @@
                         </div>
                         <p class="movie-review">
                             {% if object.movie_review != '' and object.movie_review != None %}
-                            {{ object.movie_review|capfirst }}
+                            {{ object.movie_review|capfirst|safe }}
                             {% else %}
                             ---
                             {% endif %}
