@@ -166,7 +166,7 @@
                         {% if object.movie_trailer_review != '' and object.movie_trailer_review != None %}
                         <div class="trailer-review">
                         <h1 class="trailer-heading">Trailer Review</h1>
-                        <p>{{ object.movie_trailer_review|capfirst }}</p>
+                        <p>{{ object.movie_trailer_review|capfirst|safe }}</p>
                         </div>
                         {% endif %}
                         <!-- trailer review end here -->
