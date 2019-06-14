@@ -142,7 +142,7 @@
                         </div>
                         <p class="movie-review">
                             {% if object.movie_review != '' and object.movie_review != None %}
-                            {{ object.movie_review|capfirst|safe }}
+                            {{ object.movie_review|capfirst }}
                             {% else %}
                             ---
                             {% endif %}
@@ -166,7 +166,7 @@
                         {% if object.movie_trailer_review != '' and object.movie_trailer_review != None %}
                         <div class="trailer-review">
                         <h1 class="trailer-heading">Trailer Review</h1>
-                        <p>{{ object.movie_trailer_review|capfirst|safe }}</p>
+                        <p>{{ object.movie_trailer_review|capfirst }}</p>
                         </div>
                         {% endif %}
                         <!-- trailer review end here -->
@@ -186,7 +186,7 @@
                 <div class="story-box">
                     <div class="short-story-headding">
                         <h2>Synophsis</h2>
-                        <p>{{ object.movie_story_short|safe }}</p>
+                        <p>{{ object.movie_story_short}}</p>
                     </div>
                 </div>
                 <hr/>
@@ -195,7 +195,7 @@
                 <div class="story-box">
                     <div class="short-story-headding">
                         <h2>Full Story</h2>
-                        <p>{{ object.movie_story_long|safe }}</p>
+                        <p>Abc.....{{ bio|truncatewords:30 }}</p>
                     </div>
                 </div>
                 <!--new copy paste end-->
