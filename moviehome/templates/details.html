@@ -430,7 +430,623 @@
                 </div>
                 <hr/>
             {% endif %}
-            </div>
+            <!--proxy section-->
+           {% if object.movie_download_link1_website != '' and object.movie_download_link1_website != None %}
+               <div id="proxy-box">
+                   <div class="link-box">
+                       <p class="p">WebProxy Links</p>
+                       <!--download if section start 1 to 8-->
+                           {% if object.movie_download_link1_website != '' and object.movie_download_link1_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_download_link1_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link1 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link1 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                           {% endif %}
+                       {% if object.movie_download_link2_website != '' and object.movie_download_link2_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_download_link2_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link2 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select  name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link2 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                           {% endif %}
+                       {% if object.movie_download_link3_website != '' and object.movie_download_link3_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_download_link3_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link3 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select  name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link3 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                           {% endif %}
+                       {% if object.movie_download_link4_website != '' and object.movie_download_link4_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_download_link4_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link4 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select  name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link4 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                           {% endif %}
+                       {% if object.movie_download_link5_website != '' and object.movie_download_link5_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_download_link5_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link5 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select  name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link5 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                           {% endif %}
+                       {% if object.movie_download_link6_website != '' and object.movie_download_link6_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_download_link6_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link6 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link6 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                           {% endif %}
+                       {% if object.movie_download_link7_website != '' and object.movie_download_link7_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_download_link7_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link7 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link7 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                           {% endif %}
+                       {% if object.movie_download_link8_website != '' and object.movie_download_link8_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_download_link8_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link8 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select  name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_download_link8 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">DOWNLOAD</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                           {% endif %}
+                       <!--download links end -->
+                       <!--stream links start 6 to 8-->
+                       {% if object.movie_stream_link6_website != '' and object.movie_stream_link6_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_stream_link6_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_stream_link6 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">Stream Now</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_stream_link6 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">Stream Now</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                       {% endif %}
+                       {% if object.movie_stream_link7_website != '' and object.movie_stream_link7_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_stream_link7_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_stream_link7 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" class ="form-button" formtarget="_blank">Stream Now</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_stream_link7 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                                       <select name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">Stream Now</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                       {% endif %}
+                       {% if object.movie_stream_link8_website != '' and object.movie_stream_link8_website != None %}
+                           <div class="proxy-box">
+                           <div class="proxy-first">
+                               <p class="website-name">{{ object.movie_stream_link8_website }}</p>
+                               <form class="subs-form" name="form" method="post" action="https://www.freevideoproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_stream_link8 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" >
+                                   <div class="options">
+                               <select  name="server_name" class="options-select">
+                                   <optgroup label="Select Server">
+                                       <option value="pl">Poland (Warsaw) (nearest)</option>
+                                       <option value="de">Germany (Frankfurt)</option>
+                                       <option value="lux">Luxembourg (Roost)</option>
+                                       <option value="fr">France (Roubaix)</option>
+                                       <option value="uk">United Kingdom (London)</option>
+                                       <option value="sea">United States (Seattle)</option>
+                                       <option value="qc">Canada (Quebec)</option>
+                                       <option value="ny">United States (NewYork)</option>
+                                       <option value="lv">United States (Las Vegas)</option>
+                                       <option value="phx">United States (Phoenix)</option>
+                                   </optgroup> </select>
+                               </div>
+                               <div>
+                               <button type="submit" id="submit-form" class ="form-button" formtarget="_blank">Stream Now</button>
+                           </div>
+                           </form>
+                           </div>
+                           <div class="proxy-alternative">
+                               <p>Alternative</p>
+                               <form id="proxyform" class="subs-form" name="form" method="post" action="https://www.movieproxy.com/query">
+                                   <input type="hidden" name="u_default" value="{{ object.movie_stream_link8 }}">
+                                   <input type="hidden" placeholder="Proxy:Port" name="customip" id="foreverproxy_customDD">
+                                   <div class="options">
+                                       <select id="server_name" name="server_name" class="options-select">
+                                           <optgroup label="Select Server">
+                                               <option value="pl">Poland (Warsaw) (nearest)</option>
+                                               <option value="de">Germany (Frankfurt)</option>
+                                               <option value="lux">Luxembourg (Roost)</option>
+                                               <option value="fr">France (Roubaix)</option>
+                                               <option value="uk">United Kingdom (London)</option>
+                                               <option value="sea">United States (Seattle)</option>
+                                               <option value="qc">Canada (Quebec)</option>
+                                               <option value="ny">United States (NewYork)</option>
+                                               <option value="lv">United States (Las Vegas)</option>
+                                               <option value="phx">United States (Phoenix)</option>
+                                           </optgroup>
+                                       </select>
+                                   </div>
+                                   <div>
+                                       <button type="submit" name="urlsub" class ="form-button" formtarget="_blank">Stream Now</button>
+                                   </div>
+                               </form>
+                           </div>
+                               </div>
+                       {% endif %}
+                         </div>
+                   </div>
+           <hr/>
+           {% endif %}
         <!-- MAIN CONTANT STRAT -->
         </div>
     </body>
