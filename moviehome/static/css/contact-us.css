@@ -23,6 +23,7 @@ body{
     padding-top: 10px;
     text-align: center;
     width: 100%;
+    background-color: rgb(243, 236, 236)
     background-color: rgba(243, 236, 236, 0.616);
     color: black;
 }
@@ -33,7 +34,7 @@ body{
     width:45%;
      margin-top:28px;
     vertical-align:top;
-    
+
   }
   .rightname{
     display:inline-block;
@@ -80,7 +81,7 @@ body{
       width:45%;
        margin-top:28px;
       vertical-align:top; */
-      
+
     }
     .rightname{
       /* display:inline-block;
@@ -143,5 +144,5 @@ body{
       color:white;
       border-radius:100%;
       line-height:100px;
-      
+
     }
